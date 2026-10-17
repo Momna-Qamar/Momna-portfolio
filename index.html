@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Momna Qamar | UI/UX Designer</title>
+  <meta name="description" content="Momna Qamar is a UI/UX designer creating user-centered web and mobile experiences, from AI tools to everyday apps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // If an image is missing, try other common file extensions before hiding it
+    function tryNextImage(img) {
+      var base = img.getAttribute("data-base");
+      var exts = ["jpg", "png", "jpeg", "webp", "svg", "avif", "JPG", "PNG", "JPEG", "WEBP"];
+      var i = parseInt(img.getAttribute("data-try") || "0", 10);
+      if (i < exts.length) {
+        img.setAttribute("data-try", i + 1);
+        img.src = base + "." + exts[i];
+      } else {
+        img.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo">Momna Qamar</a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn--primary nav__mobile-cta">Hire Me</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary nav__cta">Hire Me</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="about">
+      <div class="hero__text reveal">
+        <span class="pill">UI/UX Designer</span>
+        <h1 class="hero__title gradient-text">Crafting with Purpose</h1>
+        <p class="hero__desc">
+          I'm Momna Qamar, a UI/UX designer passionate about creating user-centered
+          digital experiences. I design clean, functional and visually engaging
+          solutions that solve real problems.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Hire Me</a>
+          <a href="#projects" class="btn btn--ghost">View Projects</a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal">
+        <img src="assets/hero.jpg" data-base="assets/hero" alt="Abstract 3D glass sculpture in blue and violet light" onerror="tryNextImage(this)" />
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section container" id="services">
+      <h2 class="section__title reveal">Services</h2>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>End-to-end interface design, from wireframes to polished visuals, grounded in user research and usability best practices.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <h3>Product Design</h3>
+          <p>Strategic product thinking that aligns business goals with user needs. I design products people want to use, from concept to launch.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </div>
+          <h3>Design Systems</h3>
+          <p>Scalable component libraries and design tokens that keep products consistent and speed up your team's workflow.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M7 9l3 2-3 2"/></svg>
+          </div>
+          <h3>Prototyping</h3>
+          <p>Interactive, high-fidelity prototypes that communicate design intent clearly and enable rapid validation with real users.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3>User Research</h3>
+          <p>Qualitative and quantitative research methods, including interviews, surveys, usability testing and data analysis.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </div>
+          <h3>Social Media Design</h3>
+          <p>Scroll-stopping posts, stories, carousels and ad creatives designed to match your brand and grow engagement across every platform.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects">
+      <h2 class="section__title reveal">Projects</h2>
+
+      <div class="projects-grid">
+        <a href="artify.html" class="project-card project-card--wide reveal" aria-label="Open the Artify AI case study">
+          <div class="project-card__media media--artify">
+            <img src="assets/artify.jpg" data-base="assets/artify" alt="Artify AI web app preview" onerror="tryNextImage(this)" />
+            <span class="project-card__tag">Web App</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Artify AI <span class="arrow">&#8599;</span></h3>
+            <p>Artify AI is a web application that lets users generate high-quality images from text prompts. I designed it for creators, marketers and designers who need visuals fast, without needing advanced design skills.</p>
+          </div>
+        </a>
+
+        <article class="project-card reveal">
+          <div class="project-card__media media--biterush">
+            <img src="assets/biterush.jpg" data-base="assets/biterush" alt="Bite Rush food app preview" onerror="tryNextImage(this)" />
+            <span class="project-card__tag">Mobile App</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Bite Rush <span class="arrow">&#8599;</span></h3>
+            <p>Bite Rush is a mobile app for discovering restaurants, browsing menus and ordering food quickly.</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__media media--pawhaven">
+            <img src="assets/pawhaven.jpg" data-base="assets/pawhaven" alt="Pawhaven pet adoption app preview" onerror="tryNextImage(this)" />
+            <span class="project-card__tag">Mobile App</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Pawhaven <span class="arrow">&#8599;</span></h3>
+            <p>Pawhaven is a mobile app that connects people looking to adopt with shelters and pet owners.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TOOLS ============ -->
+    <section class="section container" id="tools">
+      <div class="tools-head reveal">
+        <h2 class="section__title">I'm skilled in tools<br />that matter.</h2>
+        <div class="marquee" aria-label="Tools I use: Photoshop, Figma, Lightroom, Framer">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span class="tool-logo tool-logo--ps" title="Photoshop">Ps</span>
+            <span class="tool-logo tool-logo--svg" title="Figma"><svg class="figma" viewBox="0 0 38 57"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span>
+            <span class="tool-logo tool-logo--lr" title="Lightroom">Lr</span>
+            <span class="tool-logo tool-logo--svg" title="Framer"><svg class="framer" viewBox="0 0 24 36"><path fill="#fff" d="M0 0h24v12H12zM0 12h12l12 12H0zM0 24h12v12z"/></svg></span>
+            <span class="tool-logo tool-logo--ps" aria-hidden="true" title="Photoshop">Ps</span>
+            <span class="tool-logo tool-logo--svg" aria-hidden="true" title="Figma"><svg class="figma" viewBox="0 0 38 57"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span>
+            <span class="tool-logo tool-logo--lr" aria-hidden="true" title="Lightroom">Lr</span>
+            <span class="tool-logo tool-logo--svg" aria-hidden="true" title="Framer"><svg class="framer" viewBox="0 0 24 36"><path fill="#fff" d="M0 0h24v12H12zM0 12h12l12 12H0zM0 24h12v12z"/></svg></span>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span class="tool-logo tool-logo--ps" title="Photoshop">Ps</span>
+            <span class="tool-logo tool-logo--svg" title="Figma"><svg class="figma" viewBox="0 0 38 57"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span>
+            <span class="tool-logo tool-logo--lr" title="Lightroom">Lr</span>
+            <span class="tool-logo tool-logo--svg" title="Framer"><svg class="framer" viewBox="0 0 24 36"><path fill="#fff" d="M0 0h24v12H12zM0 12h12l12 12H0zM0 24h12v12z"/></svg></span>
+            <span class="tool-logo tool-logo--ps" aria-hidden="true" title="Photoshop">Ps</span>
+            <span class="tool-logo tool-logo--svg" aria-hidden="true" title="Figma"><svg class="figma" viewBox="0 0 38 57"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span>
+            <span class="tool-logo tool-logo--lr" aria-hidden="true" title="Lightroom">Lr</span>
+            <span class="tool-logo tool-logo--svg" aria-hidden="true" title="Framer"><svg class="framer" viewBox="0 0 24 36"><path fill="#fff" d="M0 0h24v12H12zM0 12h12l12 12H0zM0 24h12v12z"/></svg></span>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card reveal">
+          <span class="tool-logo tool-logo--ps tool-logo--sm">Ps</span>
+          <h3>Photoshop</h3>
+          <p>Photo editing and retouching, image compositing, mockups, and visual assets for web and social media.</p>
+        </article>
+
+        <article class="tool-card reveal">
+          <span class="tool-logo tool-logo--svg tool-logo--sm"><svg class="framer" viewBox="0 0 24 36"><path fill="#fff" d="M0 0h24v12H12zM0 12h12l12 12H0zM0 24h12v12z"/></svg></span>
+          <h3>Framer</h3>
+          <p>Web design, landing pages, interactive websites and animations, published live without code.</p>
+        </article>
+
+        <article class="tool-card reveal">
+          <span class="tool-logo tool-logo--svg tool-logo--sm"><svg class="figma" viewBox="0 0 38 57"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span>
+          <h3>Figma</h3>
+          <p>UI/UX design, prototyping, auto layout, component libraries and design systems.</p>
+        </article>
+
+        <article class="tool-card reveal">
+          <span class="tool-logo tool-logo--lr tool-logo--sm">Lr</span>
+          <h3>Lightroom</h3>
+          <p>Color grading and photo enhancement to keep product and project imagery polished and consistent.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FAQS ============ -->
+    <section class="section container" id="faqs">
+      <h2 class="section__title reveal">FAQs</h2>
+
+      <div class="faq-list">
+        <div class="faq reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>What services do you offer?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p>I offer UI/UX design, product design, design systems, prototyping, user research and social media design for web and mobile products.</p></div>
+        </div>
+
+        <div class="faq reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>What does your design process look like?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p>I start with research to understand your users and goals, then move through wireframes, visual design and interactive prototypes, testing and refining at each step.</p></div>
+        </div>
+
+        <div class="faq reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>How long does a project usually take?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p>It depends on the scope. A landing page can take about a week, while a full mobile app design usually takes several weeks. I'll share a clear timeline before we start.</p></div>
+        </div>
+
+        <div class="faq reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>Will I receive the design files?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p>Yes. You'll get organized Figma files with components and styles, plus developer-ready specs and exported assets.</p></div>
+        </div>
+
+        <div class="faq reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>Do you work with developers?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p>Absolutely. I prepare clean handoff files and stay available during development to answer questions and review the build.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container contact" id="contact">
+      <p class="contact__big reveal" aria-hidden="true">Contact Me</p>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <h2 class="section__title">Reach Out</h2>
+          <p class="contact__lead">Have a question or need help with a project? Reach out to me for any inquiries you have.</p>
+          <ul class="contact__perks">
+            <li>Personalized assistance</li>
+            <li>Timely response</li>
+            <li>Comprehensive support</li>
+          </ul>
+
+          <a class="info-card" href="mailto:momnaqamar68@gmail.com">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+            <strong>Email Me</strong>
+            <span>momnaqamar68@gmail.com</span>
+          </a>
+
+          <a class="info-card" href="tel:+92 325 4941397">
+            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <strong>Phone No.</strong>
+            <span>+92 325 4941397</span>
+          </a>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <select name="service" required>
+            <option value="" disabled selected>Service Requested</option>
+            <option>UI/UX Design</option>
+            <option>Product Design</option>
+            <option>Design Systems</option>
+            <option>Prototyping</option>
+            <option>User Research</option>
+            <option>Social Media Design</option>
+          </select>
+          <textarea name="message" rows="6" placeholder="Project Details" required></textarea>
+          <!-- hidden field to catch spam bots -->
+          <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn btn--primary">Submit</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Designed by @momnaqamar · UI/UX Designer · <span id="year"></span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
