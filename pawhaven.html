@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawHaven Case Study | Momna Qamar</title>
+  <meta name="description" content="PawHaven case study by Momna Qamar: a pet adoption app that matches people with rescued pets through a short quiz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="stylesheet" href="pawhaven.css" />
+</head>
+<body class="ph">
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo">Momna Qamar</a>
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#faqs">FAQs</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="btn btn--primary nav__mobile-cta">Hire Me</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn--primary nav__cta">Hire Me</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="container ph-hero">
+      <div class="ph-hero__text">
+        <a href="index.html#projects" class="back-link reveal">&larr; Back to projects</a>
+        <span class="ph-pill reveal">Pet Adoption · Mobile App</span>
+        <h1 class="ph-hero__title reveal">Paw<span>Haven</span></h1>
+        <p class="ph-hero__tagline reveal">Find a friend who needs you.</p>
+        <p class="ph-hero__desc reveal">A pet adoption app that matches people with rescued cats and dogs through a short quiz, so every pet finds a home that truly fits.</p>
+
+        <dl class="ph-meta reveal">
+          <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+          <div><dt>Platform</dt><dd>iOS &amp; Android</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+          <div><dt>Screens</dt><dd>8 key screens</dd></div>
+        </dl>
+      </div>
+
+      <div class="ph-hero__visual reveal" aria-hidden="true">
+        <span class="ph-blob"></span>
+        <span class="ph-blob ph-blob--green"></span>
+        <div class="ph-phone ph-phone--back"><img src="assets/pawhaven/onboarding.jpg" alt="" /></div>
+        <div class="ph-phone ph-phone--front"><img src="assets/pawhaven/home.jpg" alt="" /></div>
+        <svg class="ph-floatpaw fp-1" viewBox="0 0 100 100"><use href="#paw" /></svg>
+        <svg class="ph-floatpaw fp-2" viewBox="0 0 100 100"><use href="#paw" /></svg>
+        <svg class="ph-floatpaw fp-3" viewBox="0 0 100 100"><use href="#paw" /></svg>
+      </div>
+    </section>
+
+    <!-- reusable paw shape -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <g id="paw">
+          <ellipse cx="50" cy="66" rx="24" ry="20" />
+          <ellipse cx="22" cy="40" rx="9" ry="12" transform="rotate(-20 22 40)" />
+          <ellipse cx="40" cy="24" rx="9" ry="12" transform="rotate(-6 40 24)" />
+          <ellipse cx="60" cy="24" rx="9" ry="12" transform="rotate(6 60 24)" />
+          <ellipse cx="78" cy="40" rx="9" ry="12" transform="rotate(20 78 40)" />
+        </g>
+      </defs>
+    </svg>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section container">
+      <div class="ph-story">
+        <article class="ph-story__row reveal">
+          <div class="ph-story__head">
+            <span class="ph-story__icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <div><span class="ph-story__num">01</span><h2>Overview</h2></div>
+          </div>
+          <p>PawHaven connects people looking to adopt with rescued pets. A short quiz learns what kind of pet suits the user's life and shows matches they can save, meet and adopt.</p>
+        </article>
+        <article class="ph-story__row reveal">
+          <div class="ph-story__head">
+            <span class="ph-story__icon"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+            <div><span class="ph-story__num">02</span><h2>The problem</h2></div>
+          </div>
+          <p>Adoption listings are scattered across social media and shelter sites. People scroll endlessly, don't know which pet suits their home, and give up before they find the right one.</p>
+        </article>
+        <article class="ph-story__row reveal">
+          <div class="ph-story__head">
+            <span class="ph-story__icon"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <div><span class="ph-story__num">03</span><h2>The solution</h2></div>
+          </div>
+          <p>A warm, friendly app that asks a few simple questions, then shows pets that match. Clear profiles, favorites and a one-tap adoption start make the journey easy.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN PROCESS ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Design process</h2>
+      <ol class="ph-process">
+        <li class="reveal"><span class="ph-process__paw"><svg viewBox="0 0 100 100"><use href="#paw" /></svg><b>1</b></span><h3>Research</h3><p>Talked to adopters and studied shelter websites to find what slows people down.</p></li>
+        <li class="reveal"><span class="ph-process__paw"><svg viewBox="0 0 100 100"><use href="#paw" /></svg><b>2</b></span><h3>User flow</h3><p>Mapped the journey from the matching quiz to starting an adoption.</p></li>
+        <li class="reveal"><span class="ph-process__paw"><svg viewBox="0 0 100 100"><use href="#paw" /></svg><b>3</b></span><h3>Wireframes</h3><p>Sketched the quiz, match list, pet profile and favorites layouts.</p></li>
+        <li class="reveal"><span class="ph-process__paw"><svg viewBox="0 0 100 100"><use href="#paw" /></svg><b>4</b></span><h3>Visual design</h3><p>Chose a warm coral and cream palette with Poppins and Inter to feel caring and friendly.</p></li>
+        <li class="reveal"><span class="ph-process__paw"><svg viewBox="0 0 100 100"><use href="#paw" /></svg><b>5</b></span><h3>Prototype</h3><p>Built an interactive prototype and tested the quiz flow with real users.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Key features</h2>
+
+      <div class="ph-feature reveal">
+        <div class="ph-feature__stage">
+          <div class="ph-phone ph-phone--tilt-l"><img src="assets/pawhaven/onboarding.jpg" alt="Find your perfect match intro screen" /></div>
+          <div class="ph-phone ph-phone--tilt-r"><img src="assets/pawhaven/quiz.jpg" alt="Quiz question: what age pet do you prefer" /></div>
+        </div>
+        <div class="ph-feature__text">
+          <span class="ph-tag">Match</span>
+          <h3>A quick quiz finds your perfect match</h3>
+          <p>Users answer 4 simple questions about the pet they want and their lifestyle. A progress bar shows how far along they are, so the quiz never feels long.</p>
+        </div>
+      </div>
+
+      <div class="ph-feature ph-feature--flip reveal">
+        <div class="ph-feature__stage">
+          <div class="ph-phone"><img src="assets/pawhaven/matches.jpg" alt="Your matches list" /></div>
+        </div>
+        <div class="ph-feature__text">
+          <span class="ph-tag">Discover</span>
+          <h3>Matches that fit your life</h3>
+          <p>Results show each pet's age, gender, breed and location, plus a short note on their personality, so users can compare at a glance.</p>
+        </div>
+      </div>
+
+      <div class="ph-feature reveal">
+        <div class="ph-feature__stage">
+          <div class="ph-phone"><img src="assets/pawhaven/pet-details.jpg" alt="Pet profile for Luna with health details" /></div>
+        </div>
+        <div class="ph-feature__text">
+          <span class="ph-tag">Profile</span>
+          <h3>Everything you need to know</h3>
+          <p>Each profile shows the pet's story, temperament and health details like vaccination and deworming, with a clear button to start the adoption.</p>
+        </div>
+      </div>
+
+      <div class="ph-feature ph-feature--flip reveal">
+        <div class="ph-feature__stage">
+          <div class="ph-phone"><img src="assets/pawhaven/favorites.jpg" alt="Favorites screen with saved pets" /></div>
+        </div>
+        <div class="ph-feature__text">
+          <span class="ph-tag">Save</span>
+          <h3>Keep your favorites close</h3>
+          <p>Tap the heart to save a pet. Favorites keep every pet a user loves in one place, ready to meet when they're ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TYPOGRAPHY ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Typography</h2>
+
+      <div class="ph-font reveal">
+        <div class="ph-font__glyph" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Aa</div>
+        <div class="ph-font__info">
+          <span class="ph-font__role">Headings · Pet names · Buttons</span>
+          <h3 style="font-family: 'Poppins', sans-serif;">Poppins</h3>
+          <p>A geometric, rounded sans-serif. Its soft curves make PawHaven feel warm and friendly.</p>
+          <p class="ph-font__chars" style="font-family: 'Poppins', sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />0123456789 !?&amp;@</p>
+          <ul class="ph-font__weights" style="font-family: 'Poppins', sans-serif;">
+            <li><b style="font-weight: 400;">Aa</b><span>Regular 400</span></li>
+            <li><b style="font-weight: 500;">Aa</b><span>Medium 500</span></li>
+            <li><b style="font-weight: 600;">Aa</b><span>Semibold 600</span></li>
+            <li><b style="font-weight: 700;">Aa</b><span>Bold 700</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ph-font ph-font--flip reveal">
+        <div class="ph-font__glyph" style="font-family: 'Inter', sans-serif; font-weight: 600;">Aa</div>
+        <div class="ph-font__info">
+          <span class="ph-font__role">Body text · Labels · Details</span>
+          <h3 style="font-family: 'Inter', sans-serif;">Inter</h3>
+          <p>A clean, highly readable typeface for descriptions and small details like age, breed and location.</p>
+          <p class="ph-font__chars" style="font-family: 'Inter', sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />0123456789 !?&amp;@</p>
+          <ul class="ph-font__weights" style="font-family: 'Inter', sans-serif;">
+            <li><b style="font-weight: 400;">Aa</b><span>Regular 400</span></li>
+            <li><b style="font-weight: 500;">Aa</b><span>Medium 500</span></li>
+            <li><b style="font-weight: 600;">Aa</b><span>Semibold 600</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="ph-hierarchy reveal">
+        <li><span class="ph-hierarchy__tag">H1 · Poppins Bold · 32px</span><span class="ph-hierarchy__ex" style="font-family:'Poppins'; font-weight:700; font-size:clamp(1.4rem,3vw,2rem);">Find a Friend Who <em>Needs You</em></span></li>
+        <li><span class="ph-hierarchy__tag">H2 · Poppins Semibold · 20px</span><span class="ph-hierarchy__ex" style="font-family:'Poppins'; font-weight:600; font-size:1.25rem;">Featured Pets</span></li>
+        <li><span class="ph-hierarchy__tag">Body · Inter Regular · 14px</span><span class="ph-hierarchy__ex" style="font-family:'Inter'; font-size:0.95rem; color:var(--muted);">Give a rescued pet a loving home and gain a loyal companion.</span></li>
+        <li><span class="ph-hierarchy__tag">Button · Poppins Medium · 16px</span><span class="ph-hierarchy__ex"><span class="ph-hierarchy__btn">Start Adoption</span></span></li>
+      </ul>
+    </section>
+
+    <!-- ============ COLORS ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Colors</h2>
+      <p class="ph-lead reveal">A warm coral leads the palette, balanced by soft sage, deep charcoal and cream. Hover a paw to see where each color is used, and click to copy its hex code.</p>
+
+      <div class="paw-trail">
+        <button class="paw-card paw-card--hero reveal" style="--c:#E8785A; --t:#fff;" data-hex="#E8785A">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Coral</span>
+          <span class="paw-card__hex">#E8785A</span>
+          <span class="paw-card__use">Primary · buttons, active tabs, highlights</span>
+          <span class="paw-card__badge">Primary</span>
+        </button>
+        <button class="paw-card reveal" style="--c:#222222; --t:#fff;" data-hex="#222222">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Charcoal</span>
+          <span class="paw-card__hex">#222222</span>
+          <span class="paw-card__use">Headings and pet names</span>
+        </button>
+        <button class="paw-card reveal" style="--c:#D6E7D7; --t:#1f3b24;" data-hex="#D6E7D7">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Sage</span>
+          <span class="paw-card__hex">#D6E7D7</span>
+          <span class="paw-card__use">Banners and check icons</span>
+        </button>
+        <button class="paw-card reveal" style="--c:#202631; --t:#fff;" data-hex="#202631">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Midnight</span>
+          <span class="paw-card__hex">#202631</span>
+          <span class="paw-card__use">Bold titles and icons</span>
+        </button>
+        <button class="paw-card reveal" style="--c:#737373; --t:#fff;" data-hex="#737373">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Stone</span>
+          <span class="paw-card__hex">#737373</span>
+          <span class="paw-card__use">Body text and descriptions</span>
+        </button>
+        <button class="paw-card reveal" style="--c:#727070; --t:#fff;" data-hex="#727070">
+          <svg class="paw-card__paw" viewBox="0 0 100 100"><use href="#paw" /></svg>
+          <span class="paw-card__name">Taupe</span>
+          <span class="paw-card__hex">#727070</span>
+          <span class="paw-card__use">Labels and inactive icons</span>
+        </button>
+      </div>
+
+      <!-- how much of each color the app uses -->
+      <div class="ph-ratio reveal">
+        <p class="ph-ratio__title">Color usage in the app</p>
+        <div class="ph-ratio__bar">
+          <span style="--c:#FFF8F1; --w:38;" data-hex="#FFF8F1" data-label="Cream background · #FFF8F1"></span>
+          <span style="--c:#E8785A; --w:20;" data-hex="#E8785A" data-label="Coral · #E8785A"></span>
+          <span style="--c:#737373; --w:14;" data-hex="#737373" data-label="Stone · #737373"></span>
+          <span style="--c:#222222; --w:10;" data-hex="#222222" data-label="Charcoal · #222222"></span>
+          <span style="--c:#D6E7D7; --w:8;" data-hex="#D6E7D7" data-label="Sage · #D6E7D7"></span>
+          <span style="--c:#202631; --w:5;" data-hex="#202631" data-label="Midnight · #202631"></span>
+          <span style="--c:#727070; --w:5;" data-hex="#727070" data-label="Taupe · #727070"></span>
+        </div>
+        <p class="ph-ratio__label" id="ratioLabel">Hover the bar to explore</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREENS WALL ============ -->
+    <section class="ph-wall-section">
+      <div class="container">
+        <h2 class="section__title reveal">Screens</h2>
+      </div>
+
+      <div class="ph-wall reveal">
+        <div class="ph-wall__inner">
+          <div class="ph-col ph-col--up">
+            <img src="assets/pawhaven/splash.jpg" alt="Splash screen" />
+            <img src="assets/pawhaven/favorites.jpg" alt="Favorites screen" />
+            <img src="assets/pawhaven/quiz.jpg" alt="Quiz screen" />
+          </div>
+          <div class="ph-col ph-col--down">
+            <img src="assets/pawhaven/login.jpg" alt="Login screen" />
+            <img src="assets/pawhaven/pet-details.jpg" alt="Pet details screen" />
+            <img src="assets/pawhaven/home.jpg" alt="Home screen" />
+          </div>
+          <div class="ph-col ph-col--up">
+            <img src="assets/pawhaven/home.jpg" alt="Home screen" />
+            <img src="assets/pawhaven/onboarding.jpg" alt="Find your perfect match screen" />
+            <img src="assets/pawhaven/matches.jpg" alt="Your matches screen" />
+          </div>
+          <div class="ph-col ph-col--down">
+            <img src="assets/pawhaven/quiz.jpg" alt="Quiz screen" />
+            <img src="assets/pawhaven/matches.jpg" alt="Your matches screen" />
+            <img src="assets/pawhaven/splash.jpg" alt="Splash screen" />
+          </div>
+          <div class="ph-col ph-col--up">
+            <img src="assets/pawhaven/pet-details.jpg" alt="Pet details screen" />
+            <img src="assets/pawhaven/login.jpg" alt="Login screen" />
+            <img src="assets/pawhaven/favorites.jpg" alt="Favorites screen" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THANK YOU ============ -->
+    <section class="container section">
+      <div class="ph-thanks reveal">
+        <svg class="ph-thanks__paw" viewBox="0 0 100 100" aria-hidden="true"><use href="#paw" /></svg>
+        <h2>Thank you</h2>
+        <p>Every great product starts with a little care. Let's create something people love.</p>
+        <a href="index.html#contact" class="btn ph-thanks__btn">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Designed by @momnaqamar · UI/UX Designer · <span id="year"></span></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="pawhaven.js"></script>
+</body>
+</html>
