@@ -21,7 +21,7 @@ document.querySelectorAll(".paw-card").forEach((card) => {
 
 // ===== Color usage bar =====
 const ratioLabel = document.getElementById("ratioLabel");
-document.querySelectorAll(".ph-ratio__bar span").forEach((slice) => {
+if (ratioLabel) document.querySelectorAll(".ph-ratio__bar span").forEach((slice) => {
   slice.addEventListener("mouseenter", () => {
     ratioLabel.textContent = `${slice.dataset.label} · about ${getComputedStyle(slice).getPropertyValue("--w").trim()}% of the interface`;
   });
