@@ -329,7 +329,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tool-logo--sm { width: 36px; height: 36px; font-size: 0.95rem; border-radius: 7px; }
 .tool-logo--sm svg { height: 26px; }
 
-.tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 
 .tool-card {
   position: relative;
@@ -454,7 +454,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 960px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 760px) {

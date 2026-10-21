@@ -25,7 +25,7 @@
     }
   </script>
 </head>
-<body>
+<body class="af">
   <div class="bg-glow" aria-hidden="true"></div>
 
   <!-- ============ NAVBAR ============ -->
@@ -66,24 +66,88 @@
         </dl>
       </div>
       <div class="cs-cover reveal">
-        <img src="assets/artify.jpg" data-base="assets/artify" alt="Artify AI cover: a face dissolving into glowing digital shards" onerror="tryNextImage(this)" />
+        <img src="assets/artify/cover.jpg" alt="Artify AI cover: a face dissolving into glowing digital shards" />
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ ABOUT THE PROJECT ============ -->
     <section class="section container">
       <h2 class="section__title reveal">About the project</h2>
-      <div class="cs-about">
-        <article class="cs-about__card reveal">
-          <span class="cs-about__num">01</span>
-          <h3>Overview</h3>
-          <p>Artify AI is a web application that lets users generate high-quality images from text prompts. I designed it for creators, marketers and designers who need visuals fast, without needing advanced design skills.</p>
+      <div class="cs-story">
+        <article class="cs-story__row reveal">
+          <div class="cs-story__head">
+            <span class="cs-story__icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <div><span class="cs-story__num">01</span><h2>Overview</h2></div>
+          </div>
+          <p>Artify AI is a web application that lets users generate high-quality images from text prompts. I designed it for creators, marketers and designers who need visuals fast, without advanced design skills.</p>
         </article>
-        <article class="cs-about__card reveal">
-          <span class="cs-about__num">02</span>
-          <h3>The problem</h3>
+        <article class="cs-story__row reveal">
+          <div class="cs-story__head">
+            <span class="cs-story__icon"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+            <div><span class="cs-story__num">02</span><h2>The problem</h2></div>
+          </div>
           <p>Most AI image tools feel technical and overwhelming. Beginners don't know how to write good prompts, and there's no simple way to organize or refine results.</p>
         </article>
+        <article class="cs-story__row reveal">
+          <div class="cs-story__head">
+            <span class="cs-story__icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></span>
+            <div><span class="cs-story__num">03</span><h2>The solution</h2></div>
+          </div>
+          <p>A clean workspace with simple style presets, a guided create page and a gallery that keeps every image organized, so anyone can create with confidence.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN PROCESS ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Design process</h2>
+      <ol class="process">
+        <li class="process__step reveal"><span class="process__dot">1</span><h3>Research</h3><p>Studied popular AI image tools and where beginners get stuck.</p></li>
+        <li class="process__step reveal"><span class="process__dot">2</span><h3>User flow</h3><p>Mapped the path from writing a prompt to saving and sharing an image.</p></li>
+        <li class="process__step reveal"><span class="process__dot">3</span><h3>Wireframes</h3><p>Sketched the dashboard, create page, gallery and image details.</p></li>
+        <li class="process__step reveal"><span class="process__dot">4</span><h3>Visual design</h3><p>Built a clean, light UI with violet accents so the images stand out.</p></li>
+        <li class="process__step reveal"><span class="process__dot">5</span><h3>Prototype</h3><p>Linked 30+ screens into an interactive prototype to test the flow.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">Key features</h2>
+
+      <div class="af-feature reveal">
+        <div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/dashboard.jpg" alt="Artify AI dashboard with favorites" /></div>
+        <div class="af-feature__text">
+          <span class="af-feature__tag">Dashboard</span>
+          <h3>Everything in one place</h3>
+          <p>The dashboard shows favorites and recent creations, with a clear sidebar and a credits panel so users always know their plan.</p>
+        </div>
+      </div>
+
+      <div class="af-feature af-feature--flip reveal">
+        <div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/create-image.jpg" alt="Create image screen with styles and settings" /></div>
+        <div class="af-feature__text">
+          <span class="af-feature__tag">Create</span>
+          <h3>From prompt to picture</h3>
+          <p>Users describe what they want, then pick a style, aspect ratio and image count. Advanced settings stay tucked away for beginners.</p>
+        </div>
+      </div>
+
+      <div class="af-feature reveal">
+        <div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/image-details.jpg" alt="Image details screen with prompt and actions" /></div>
+        <div class="af-feature__text">
+          <span class="af-feature__tag">Details</span>
+          <h3>Every detail of an image</h3>
+          <p>Each image shows its prompt, style and similar results, with one-click save and download.</p>
+        </div>
+      </div>
+
+      <div class="af-feature af-feature--flip reveal">
+        <div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/my-creations.jpg" alt="My creations gallery with filters" /></div>
+        <div class="af-feature__text">
+          <span class="af-feature__tag">Gallery</span>
+          <h3>Your creations, organized</h3>
+          <p>A filterable gallery keeps every generated image easy to find by date, style or keyword.</p>
+        </div>
       </div>
     </section>
 
@@ -91,17 +155,21 @@
     <section class="section container">
       <h2 class="section__title reveal">Typography</h2>
 
-      <div class="type-grid">
-        <div class="type-card reveal">
-          <span class="type-sample" style="font-family: 'Outfit', sans-serif;">Aa</span>
-          <h3>Outfit</h3>
-          <p>Outfit is a clean, geometric typeface with a modern, minimal feel. I used it for headings to give Artify AI a confident, futuristic look.</p>
+      <div class="cs-font reveal">
+        <div class="cs-font__glyph" style="font-family: 'Outfit', sans-serif; font-weight: 600;">Aa</div>
+        <div class="cs-font__info">
+          <span class="cs-font__role">Headings · Navigation · Buttons</span>
+          <h3 style="font-family: 'Outfit', sans-serif;">Outfit</h3>
+          <p>A clean, geometric typeface with a modern, minimal feel that gives Artify AI a confident, futuristic look.</p>
         </div>
+      </div>
 
-        <div class="type-card type-card--offset reveal">
-          <span class="type-sample" style="font-family: 'Inter', sans-serif;">Aa</span>
-          <h3>Inter</h3>
-          <p>Inter is a highly readable typeface designed for screens. I used it for body text, labels and buttons so the interface stays clear at every size.</p>
+      <div class="cs-font cs-font--flip reveal">
+        <div class="cs-font__glyph" style="font-family: 'Inter', sans-serif; font-weight: 600;">Aa</div>
+        <div class="cs-font__info">
+          <span class="cs-font__role">Body text · Labels · Prompts</span>
+          <h3 style="font-family: 'Inter', sans-serif;">Inter</h3>
+          <p>A highly readable typeface designed for screens, so prompts and settings stay clear at every size.</p>
         </div>
       </div>
     </section>
@@ -139,12 +207,8 @@
         <h2 class="section__title reveal">Screens</h2>
       </div>
 
-      <div class="screens__marquee reveal">
-        <div class="screens__track">
-          <img src="assets/artify-screens.png" data-base="assets/artify-screens" alt="A collage of Artify AI screens: sign-in, dashboard, collections, image details and pricing" onerror="tryNextImage(this)" />
-          <img src="assets/artify-screens.png" data-base="assets/artify-screens" alt="" aria-hidden="true" onerror="tryNextImage(this)" />
-        </div>
-      </div>
+            <div class="af-screens reveal"><div class="af-screens__track"><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/dashboard.jpg" alt="Dashboard" /></div><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/create-image.jpg" alt="Create image" /></div><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/my-creations.jpg" alt="My creations" /></div></div></div>
+      <div class="af-screens af-screens--reverse reveal"><div class="af-screens__track"><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/image-details.jpg" alt="Image details" /></div><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/image-settings.jpg" alt="Image settings" /></div><div class="browser"><div class="browser__bar"><span></span><span></span><span></span></div><img src="assets/artify/pricing.jpg" alt="Pricing" /></div></div></div>
 
       <p class="screens__count screens__count--below reveal">30+ screens</p>
     </section>
@@ -164,6 +228,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Duplicate each screens row so the horizontal scroll loops without a gap
+    document.querySelectorAll(".af-screens__track").forEach(function (track) {
+      Array.from(track.children).forEach(function (el) {
+        var copy = el.cloneNode(true); copy.setAttribute("aria-hidden", "true"); track.appendChild(copy);
+      });
+    });
+  </script>
   <script>
     // Copy a color's hex code when its swatch is clicked
     document.querySelectorAll(".swatch").forEach(function (swatch) {

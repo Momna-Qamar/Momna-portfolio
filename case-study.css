@@ -189,3 +189,131 @@ a.project-card { display: block; color: inherit; }
   .cs-tag { font-size: 0.72rem; }
 }
 @media (prefers-reduced-motion: reduce) { .screens__track { animation: none; } }
+
+
+/* =========================================================
+   Shared case-study sections (same layout on every page)
+   Each page sets its own accent colors on <body>
+   ========================================================= */
+body { --accent: #8b5cf6; --accent-soft: rgba(139, 92, 246, 0.1); --accent-line: rgba(139, 92, 246, 0.45); --accent-grad: linear-gradient(135deg, #4d7cfe, #6366f1 50%, #8b5cf6); --cs-head: var(--font-head); }
+body.br { --accent: #a5b4fc; --accent-soft: rgba(165, 180, 252, 0.08); --accent-line: rgba(165, 180, 252, 0.35); --accent-grad: linear-gradient(150deg, #ffffff 10%, #9a9aa8 100%); --cs-head: "Lato", sans-serif; }
+body.ph { --accent: #e8785a; --accent-soft: rgba(232, 120, 90, 0.1); --accent-line: rgba(232, 120, 90, 0.4); --accent-grad: linear-gradient(160deg, #e8785a 10%, #f6b9a5 55%, #d6e7d7 100%); --cs-head: "Poppins", sans-serif; }
+
+/* ---------- Overview: editorial rows ---------- */
+.cs-story { border-top: 1px solid var(--border); }
+.cs-story__row {
+  position: relative; display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: center;
+  padding: 34px 8px; border-bottom: 1px solid var(--border);
+  transition: background 0.4s, padding 0.4s var(--ease);
+}
+/* coral line that grows along the bottom on hover */
+.cs-story__row::after {
+  content: ""; position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%;
+  background: var(--accent-grad);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.6s var(--ease);
+}
+.cs-story__row:hover { background: linear-gradient(90deg, var(--accent-soft), transparent 70%); padding-left: 20px; }
+.cs-story__row:hover::after { transform: scaleX(1); }
+.cs-story__head { display: flex; align-items: center; gap: 18px; }
+.cs-story__icon {
+  width: 56px; height: 56px; flex-shrink: 0; display: grid; place-items: center;
+  border-radius: 46% 54% 50% 50% / 55% 45% 55% 45%;
+  background: var(--accent-soft); border: 1px solid var(--accent-line);
+  transition: background 0.4s, transform 0.5s var(--ease);
+}
+.cs-story__icon svg { width: 24px; height: 24px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.3s; }
+.cs-story__row:hover .cs-story__icon { background: var(--accent); transform: rotate(-10deg) scale(1.08); }
+.cs-story__row:hover .cs-story__icon svg { stroke: #fff; }
+.cs-story__num { font-family: var(--cs-head); font-size: 0.8rem; font-weight: 600; color: var(--accent); letter-spacing: 0.1em; }
+.cs-story__head h2 { font-family: var(--cs-head); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.1; }
+.cs-story__row p { color: #c9c9c9; font-size: 1.02rem; max-width: 60ch; }
+
+/* ---------- Typography: specimen layout ---------- */
+.cs-font {
+  display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center;
+  padding: 40px 0; border-bottom: 1px solid var(--border);
+}
+.cs-font--flip .cs-font__glyph { order: 2; }
+.cs-font__glyph {
+  font-size: clamp(8rem, 18vw, 15rem); line-height: 0.9; text-align: center;
+  background: var(--accent-grad);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  transition: transform 0.7s var(--ease), letter-spacing 0.7s var(--ease);
+}
+.cs-font:hover .cs-font__glyph { transform: scale(1.05) rotate(-3deg); letter-spacing: 0.04em; }
+.cs-font__role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+.cs-font__info h3 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; margin: 4px 0 8px; }
+.cs-font__info > p { color: var(--muted); max-width: 46ch; }
+  display: grid; justify-items: center; gap: 4px; min-width: 88px; padding: 12px 10px;
+  border-radius: 14px; border: 1px solid var(--border);
+  transition: border-color 0.3s, transform 0.4s var(--ease), background 0.3s;
+}
+
+
+.cs-font__info h3 { font-family: var(--cs-head); }
+.weights li:hover { border-color: var(--accent); }
+.weights li:hover .weights__num { color: var(--accent); }
+.weights__num { font-family: var(--cs-head); }
+
+/* ---------- Design process (shared) ---------- */
+.process { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; position: relative; }
+.process::before { content: ""; position: absolute; top: 21px; left: 10%; right: 10%; height: 2px; background: var(--accent-grad); opacity: 0.5; }
+.process__step { position: relative; text-align: center; padding: 0 6px; }
+.process__dot {
+  position: relative; z-index: 1; width: 44px; height: 44px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 700;
+  background: var(--bg); border: 2px solid var(--accent);
+  transition: background 0.35s, transform 0.35s var(--ease), color 0.35s;
+}
+.process__step:hover .process__dot { background: var(--accent-grad); transform: scale(1.15); border-color: transparent; color: #111; }
+.process__step h3 { font-family: var(--cs-head); font-size: 1rem; margin-bottom: 6px; }
+.process__step p { font-size: 0.82rem; color: var(--muted); }
+
+/* ---------- Web feature rows (Artify) ---------- */
+.af-feature { display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; align-items: center; padding: 28px 0; }
+.af-feature--flip .browser { order: 2; }
+.af-feature__tag {
+  display: inline-block; font-size: 0.75rem; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px;
+  background: var(--accent-soft); color: #c4b5fd; border: 1px solid var(--accent-line);
+}
+.af-feature h3 { font-family: var(--cs-head); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; margin-bottom: 12px; }
+.af-feature p { color: var(--muted); max-width: 42ch; }
+
+/* browser mockup */
+.browser {
+  border-radius: 14px; overflow: hidden; background: #1d1d22;
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 60px -30px rgba(99, 102, 241, 0.55);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+.browser__bar { display: flex; gap: 6px; padding: 10px 12px; background: #26262c; }
+.browser__bar span { width: 9px; height: 9px; border-radius: 50%; background: #4a4a52; }
+.browser__bar span:nth-child(1) { background: #ff5f57; } .browser__bar span:nth-child(2) { background: #febc2e; } .browser__bar span:nth-child(3) { background: #28c840; }
+.browser img { width: 100%; display: block; }
+.af-feature:hover .browser { transform: translateY(-8px); box-shadow: 0 40px 70px -30px rgba(139, 92, 246, 0.7); }
+
+/* Artify screens: browsers scrolling horizontally */
+.af-screens { overflow: hidden; padding: 30px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.af-screens__track { display: flex; gap: 26px; width: max-content; animation: cs-scroll 50s linear infinite; }
+.af-screens:hover .af-screens__track { animation-play-state: paused; }
+.af-screens .browser { width: 560px; flex-shrink: 0; }
+.af-screens .browser:hover { transform: translateY(-8px) scale(1.02); }
+.af-screens--reverse .af-screens__track { animation-direction: reverse; }
+
+@media (max-width: 960px) {
+  .process { grid-template-columns: 1fr; gap: 22px; }
+  .process::before { top: 0; bottom: 0; left: 21px; right: auto; width: 2px; height: auto; }
+  .process__step { display: grid; grid-template-columns: 44px 1fr; gap: 0 16px; text-align: left; padding: 0; }
+  .process__dot { margin: 0; grid-row: span 2; }
+}
+@media (max-width: 760px) {
+  .cs-story__row { grid-template-columns: 1fr; gap: 14px; padding: 26px 4px; }
+  .cs-story__row:hover { padding-left: 12px; }
+  .cs-font, .cs-font--flip { grid-template-columns: 1fr; gap: 10px; padding: 28px 0; }
+  .cs-font--flip .cs-font__glyph { order: 0; }
+  .cs-font__glyph { font-size: 7rem; text-align: left; }
+  .af-feature, .af-feature--flip { grid-template-columns: 1fr; gap: 22px; }
+  .af-feature--flip .browser { order: 0; }
+  .af-screens .browser { width: 300px; }
+}
+@media (prefers-reduced-motion: reduce) { .af-screens__track { animation: none; } }
