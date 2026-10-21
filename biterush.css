@@ -25,7 +25,7 @@
   display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center;
   padding: 40px 0 60px; min-height: 640px;
 }
-.br-hero .pill { margin-bottom: 14px; }
+
 .br-hero__title {
   font-family: "Lato", sans-serif; font-weight: 900;
   font-size: clamp(3rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.02em;
@@ -38,14 +38,14 @@
 .br-meta dt { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
 .br-meta dd { font-weight: 600; margin-top: 2px; }
 
-.br-hero__phones { position: relative; overflow: hidden; height: 560px; display: flex; justify-content: center; align-items: center; }
+.br-hero__phones { position: relative; height: 600px; display: flex; justify-content: center; align-items: center; }
 .br-hero__phones .phone { position: absolute; }
 .phone--front { width: 250px; z-index: 3; animation: float 6s ease-in-out infinite; }
 .phone--back { width: 210px; z-index: 1; opacity: 0.9; }
 .phone--left { transform: translateX(-62%) rotate(-10deg); }
 .phone--right { transform: translateX(62%) rotate(10deg); }
-.br-hero__phones:hover .phone--left { transform: translateX(-74%) rotate(-14deg); }
-.br-hero__phones:hover .phone--right { transform: translateX(74%) rotate(14deg); }
+.br-hero__phones:hover .phone--left { transform: translateX(-70%) rotate(-12deg); }
+.br-hero__phones:hover .phone--right { transform: translateX(70%) rotate(12deg); }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
 
 .float-emoji { position: absolute; z-index: 4; font-size: 2.6rem; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.6)); animation: bob 5s ease-in-out infinite; }
@@ -183,7 +183,7 @@
 
 /* ---------- Screens: two auto-scrolling rows ---------- */
 .br-screens { overflow: hidden; }
-.screens-row { overflow: hidden; padding: 16px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.screens-row { overflow: hidden; padding: 34px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .screens-track { display: flex; gap: 26px; width: max-content; animation: screens-scroll 40s linear infinite; }
 .screens-row--reverse .screens-track { animation-direction: reverse; }
 .screens-row:hover .screens-track { animation-play-state: paused; }
@@ -210,7 +210,7 @@
   .feature, .feature--flip { grid-template-columns: 1fr; gap: 24px; }
   .feature--flip .feature__phones { order: 0; }
   .feature__phones .phone { width: 150px; }
-  .br-hero__phones { height: 430px; }
+  .br-hero__phones { height: 430px; overflow: hidden; }
   .phone--front { width: 190px; }
   .phone--back { width: 150px; }
   .phone--left { transform: translateX(-52%) rotate(-10deg); }

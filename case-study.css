@@ -49,7 +49,7 @@ a.project-card { display: block; color: inherit; }
   transition: transform 0.45s var(--ease), border-color 0.45s;
 }
 .type-card:hover { transform: translateY(-6px); border-color: rgba(139, 92, 246, 0.5); }
-.type-card--offset { margin-top: 64px; }
+.type-card--offset { margin-top: 0; }
 .type-sample {
   display: block; font-size: clamp(5rem, 11vw, 8rem); font-weight: 600; line-height: 1;
   margin-bottom: 18px;
@@ -131,3 +131,61 @@ a.project-card { display: block; color: inherit; }
   .swatches { grid-template-columns: repeat(2, 1fr); }
   .screens__count { margin-top: -30px; }
 }
+
+
+/* =========================================================
+   Shared case-study header (all detail pages)
+   ========================================================= */
+/* back link on its own line, tag stacked above the main heading */
+.back-link { display: flex; width: max-content; margin-bottom: 22px; }
+.cs-tag { display: block; width: max-content; max-width: 100%; margin: 0 0 14px; }
+
+/* ---------- Artify hero: text left, image right ---------- */
+.cs-hero {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center;
+  padding: 40px 0 60px; min-height: 600px;
+}
+.cs-hero .cs-title { font-size: clamp(3rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.02em; }
+.cs-hero__tagline { font-size: 1.15rem; color: var(--text); margin: 14px 0 0; max-width: 40ch; }
+.cs-hero .cs-cover { aspect-ratio: 4 / 5; }
+.cs-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 28px; margin-top: 30px; max-width: 420px; }
+.cs-meta div { border-top: 1px solid var(--border); padding-top: 10px; }
+.cs-meta dt { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.cs-meta dd { font-weight: 600; margin-top: 2px; }
+
+/* ---------- About the project cards (Artify) ---------- */
+.cs-about { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cs-about__card {
+  padding: 26px 24px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--border);
+  transition: transform 0.45s var(--ease), border-color 0.45s;
+}
+.cs-about__card:hover { transform: translateY(-6px); border-color: rgba(139, 92, 246, 0.5); }
+.cs-about__num { font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: rgba(255, 255, 255, 0.15); }
+.cs-about__card h3 { font-family: var(--font-head); font-size: 1.2rem; margin: 6px 0 8px; }
+.cs-about__card p { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- Artify screens: horizontal auto-scroll ---------- */
+.screens__marquee {
+  overflow: hidden; padding: 20px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.screens__track { display: flex; gap: 24px; width: max-content; animation: cs-scroll 45s linear infinite; }
+.screens__track img { height: 480px; width: auto; max-width: none; border-radius: 18px; display: block; }
+.screens__marquee:hover .screens__track { animation-play-state: paused; }
+@keyframes cs-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 12px)); } }
+.screens__count--below { margin-top: 24px; }
+
+@media (max-width: 960px) {
+  .cs-hero { grid-template-columns: 1fr; min-height: 0; gap: 32px; }
+  .cs-hero .cs-cover { aspect-ratio: 16 / 11; }
+}
+@media (max-width: 760px) {
+  .cs-hero { padding-top: 28px; }
+  .cs-about { grid-template-columns: 1fr; }
+  .screens__track img { height: 260px; border-radius: 12px; }
+  .screens__count--below { margin-top: 16px; }
+  .cs-tag { font-size: 0.72rem; }
+}
+@media (prefers-reduced-motion: reduce) { .screens__track { animation: none; } }

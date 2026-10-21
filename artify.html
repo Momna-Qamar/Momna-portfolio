@@ -51,28 +51,39 @@
   </header>
 
   <main>
-    <!-- ============ INTRO ============ -->
-    <section class="container cs-intro">
-      <a href="index.html#projects" class="back-link reveal">&larr; Back to projects</a>
-      <h1 class="cs-title reveal">Artify AI</h1>
-      <p class="cs-subtitle reveal">Image generation · Web app</p>
-
+    <!-- ============ HERO ============ -->
+    <section class="container cs-hero">
+      <div class="cs-hero__text">
+        <a href="index.html#projects" class="back-link reveal">&larr; Back to projects</a>
+        <span class="pill cs-tag reveal">AI Image Generation · Web App</span>
+        <h1 class="cs-title reveal">Artify AI</h1>
+        <p class="cs-hero__tagline reveal">An AI-assisted creative workspace that turns ideas into stunning visuals.</p>
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+          <div><dt>Platform</dt><dd>Web App</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+          <div><dt>Screens</dt><dd>30+ screens</dd></div>
+        </dl>
+      </div>
       <div class="cs-cover reveal">
         <img src="assets/artify.jpg" data-base="assets/artify" alt="Artify AI cover: a face dissolving into glowing digital shards" onerror="tryNextImage(this)" />
       </div>
+    </section>
 
-      <div class="cs-summary reveal">
-        <p class="cs-tagline">An AI-assisted creative workspace that turns ideas into stunning visuals.</p>
-
-        <div class="cs-block">
-          <h2>Overview</h2>
+    <!-- ============ ABOUT ============ -->
+    <section class="section container">
+      <h2 class="section__title reveal">About the project</h2>
+      <div class="cs-about">
+        <article class="cs-about__card reveal">
+          <span class="cs-about__num">01</span>
+          <h3>Overview</h3>
           <p>Artify AI is a web application that lets users generate high-quality images from text prompts. I designed it for creators, marketers and designers who need visuals fast, without needing advanced design skills.</p>
-        </div>
-
-        <div class="cs-block">
-          <h2>The problem</h2>
+        </article>
+        <article class="cs-about__card reveal">
+          <span class="cs-about__num">02</span>
+          <h3>The problem</h3>
           <p>Most AI image tools feel technical and overwhelming. Beginners don't know how to write good prompts, and there's no simple way to organize or refine results.</p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -128,12 +139,14 @@
         <h2 class="section__title reveal">Screens</h2>
       </div>
 
-      <div class="screens__frame reveal">
-        <img src="assets/artify-screens.png" data-base="assets/artify-screens" alt="A collage of Artify AI screens: sign-in, dashboard, collections, image details and pricing" onerror="tryNextImage(this)" />
-        <div class="screens__fade" aria-hidden="true"></div>
+      <div class="screens__marquee reveal">
+        <div class="screens__track">
+          <img src="assets/artify-screens.png" data-base="assets/artify-screens" alt="A collage of Artify AI screens: sign-in, dashboard, collections, image details and pricing" onerror="tryNextImage(this)" />
+          <img src="assets/artify-screens.png" data-base="assets/artify-screens" alt="" aria-hidden="true" onerror="tryNextImage(this)" />
+        </div>
       </div>
 
-      <p class="screens__count reveal">30+ screens</p>
+      <p class="screens__count screens__count--below reveal">30+ screens</p>
     </section>
 
     <!-- ============ THANK YOU ============ -->

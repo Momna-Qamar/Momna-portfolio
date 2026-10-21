@@ -14,7 +14,6 @@
 .ph-pill {
   display: inline-block; padding: 5px 14px; border-radius: 999px; font-size: 0.78rem;
   color: var(--coral); background: rgba(232, 120, 90, 0.12); border: 1px solid rgba(232, 120, 90, 0.35);
-  margin-bottom: 14px;
 }
 .ph-tag {
   display: inline-block; font-size: 0.75rem; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px;
@@ -289,3 +288,8 @@
 @media (prefers-reduced-motion: reduce) {
   .ph-col, .ph-blob, .ph-phone--front, .ph-floatpaw { animation: none !important; }
 }
+
+/* font weight list in PawHaven coral */
+.weights--coral li:hover { border-color: var(--coral); }
+.weights--coral .weights__num { font-family: "Poppins", sans-serif; }
+.weights--coral li:hover .weights__num { color: var(--coral); }

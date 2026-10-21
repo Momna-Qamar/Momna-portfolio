@@ -61,6 +61,16 @@ function setStatus(message, type) {
   statusEl.className = "form-status " + (type || "");
 }
 
+
+// Fallback: open the visitor's email app with the message filled in.
+// Used when the backend isn't available (e.g. the page is opened from a computer, not Vercel).
+function openEmailFallback(data) {
+  const to = form.getAttribute("data-email");
+  const subject = `New inquiry: ${data.service || "Project"} from ${data.name}`;
+  const body = `Name: ${data.name}\nEmail: ${data.email}\nService: ${data.service}\n\n${data.message}`;
+  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 if (form) form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -91,12 +101,19 @@ if (form) form.addEventListener("submit", async (e) => {
       body: JSON.stringify(Object.fromEntries(new FormData(form))),
     });
     const data = await res.json().catch(() => ({}));
+    if (res.status === 400) {
+      // the server rejected the input (e.g. invalid email): show its message
+      setStatus(data.error || "Please check your details.", "error");
+      return;
+    }
     if (!res.ok) throw new Error(data.error || "Something went wrong.");
 
     form.reset();
     setStatus("Thanks! Your message has been sent. I'll get back to you soon.", "success");
   } catch (err) {
-    setStatus(err.message || "Could not send your message. Please email me directly.", "error");
+    // Backend not reachable or not set up yet: send through the visitor's email app instead
+    openEmailFallback(Object.fromEntries(new FormData(form)));
+    setStatus("Opening your email app to send this message...", "success");
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "Submit";
